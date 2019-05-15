@@ -7,7 +7,6 @@ import CardContainer from './components/CardContainer'
 
 class App extends Component {
   render() {
-    // console.log('data', data);
     return (
       <div className="App">
         <div className="App-Container">

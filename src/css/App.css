@@ -13,7 +13,7 @@
   position: relative;
   margin: 60px 150px;
   background: white; 
-  height: 400px;
+  min-height: 400px;
 }
 
 .header {
@@ -51,6 +51,10 @@
   margin: 5px 0;
 }
 
+.header {
+  border-bottom: 1px solid #cccccc;
+}
+
 .header a {
   margin-top: 10px;
   font-size: 16px;
@@ -74,7 +78,7 @@
   height: 75px;
   display: grid;
   grid-template-columns: 75px auto;
-  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
 }
 
 .card-left {
@@ -100,6 +104,7 @@
 }
 
 .sold-out {
+  font-size: 12px;
   width: 100px;
   /* height: 50px; */
   margin: 0 10px;
@@ -129,6 +134,22 @@
 .btn-ltd {
   background: #ffffff;
   border: 1px solid #cccccc;
+}
+
+.more {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0068D9;
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.chevron {
+  position: absolute;
+  right: 10px;
 }
 
 

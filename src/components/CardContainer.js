@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Card from './Card'
 
 class CardContainer extends Component {
-  state = { expanded: false }
+  state = { 
+    expanded: false,
+    performances: 4
+  }
 
   toggleExpand = () => {
     this.setState({ expanded: !this.state.expanded })
@@ -24,12 +27,20 @@ class CardContainer extends Component {
     
     return (
       <div>
-
         {this.renderCards()}
-        <div 
-          className="more" 
-          onClick={this.toggleExpand}>
-          More Performances
+        <div className="more" onClick={this.toggleExpand}>
+          {this.state.expanded ? (
+            <span>View Calendar ></span>
+          ) : (
+            <span>More Performances ({this.state.performances})</span>
+          )}
+          {!this.state.expanded && 
+            <img
+              className="chevron"
+              src="https://cdn.glitch.com/bf244f65-c514-428a-b4b2-ac2746281e91%2Fchevron.svg?1555596324053"
+              alt="chevron"
+            />
+          }
         </div>
       </div>
     );
