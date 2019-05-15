@@ -30,17 +30,20 @@ class CardContainer extends Component {
         {this.renderCards()}
         <div className="more" onClick={this.toggleExpand}>
           {this.state.expanded ? (
-            <span>View Calendar ></span>
+            <span>
+              View Calendar
+              <span className="right-caret"> > </span>
+            </span>
           ) : (
             <span>More Performances ({this.state.performances})</span>
           )}
-          {!this.state.expanded && 
+          {!this.state.expanded && (
             <img
               className="chevron"
               src="https://cdn.glitch.com/bf244f65-c514-428a-b4b2-ac2746281e91%2Fchevron.svg?1555596324053"
               alt="chevron"
             />
-          }
+          )}
         </div>
       </div>
     );
