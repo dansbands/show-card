@@ -40,6 +40,23 @@
   margin: 0;
 }
 
+.header h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+.header h3 a:hover {
+  color: #666666;
+}
+
+.header h3 a:active {
+  text-decoration: underline;
+}
+
+.header h3 a:visited {
+  color: black;
+}
+
 .light-font {
   font-weight: 400;
 }
@@ -55,23 +72,23 @@
   border-bottom: 1px solid #cccccc;
 }
 
-.header a {
+.learn-more {
   margin-top: 10px;
   font-size: 16px;
   text-decoration: none;
   color: #0068D9;
 }
 
-.header a:hover {
+.learn-more:hover {
   color: #004BA0;
 }
 
-.header a:active {
+.learn-more:active {
   color: #004BA0;
   text-decoration: underline;
 }
 
-.header a span {
+.learn-more span {
   position: relative;
   top: -2.5px;
   font-weight: bold;

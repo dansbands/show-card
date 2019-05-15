@@ -25,7 +25,6 @@ class Card extends Component {
 
     const { day, date, times } = this.props.date;
 
-
     return (
       <div className="card">
         <div className="card-left">
