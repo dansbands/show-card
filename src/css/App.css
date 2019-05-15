@@ -70,6 +70,8 @@
 }
 
 .card {
+  transition: 0.5s;
+  height: 75px;
   display: grid;
   grid-template-columns: 75px auto;
   border: 1px solid #cccccc;
@@ -78,7 +80,7 @@
 .card-left {
   grid-column-start: 1;
   grid-column-end: 2;
-  height: 75px;
+  /* height: 75px; */
   /* width: 75px; */
   border-right: 1px solid #cccccc;
   display: flex;

@@ -3,29 +3,25 @@ import React, { Component } from 'react';
 class Card extends Component {
   
   renderButtons = times => {
-    return times.map(time => {
-      console.log(time);
+    return times.map((time, idx) => {
+      // console.log(time);
       
       if (time.availability) {
         const btnCls = `btn btn-${time.availability}`
-        return <button className={btnCls}>{time.time}</button>;
+        return <button key={idx} className={btnCls}>{time.time}</button>;
       } else {
         return (
-          <div className="sold-out">
-            <div className="day">
-              Sold Out
-            </div>
-            <div className="sold-out-time">
-              {time.time}
-            </div>
+          <div key={idx} className="sold-out">
+            <div className="day">Sold Out</div>
+            <div className="sold-out-time">{time.time}</div>
           </div>
-        )
+        );
       }
     })
   }
 
   render() {
-    console.log('Card', this.props);
+    // console.log('Card', this.props);
 
     const { day, date, times } = this.props.date;
 

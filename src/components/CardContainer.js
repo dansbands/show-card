@@ -9,7 +9,12 @@ class CardContainer extends Component {
   }
 
   renderCards = () => {
-    return this.props.dates.map((date, idx) => {
+    let { dates } = this.props;
+    dates = this.state.expanded ? dates : dates.slice(0, 3); 
+    // let lessDates = this.props.
+    console.log(dates);
+    
+    return dates.map((date, idx) => {
       return <Card key={idx} date={date} />
     })
   }
