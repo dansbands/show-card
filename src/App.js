@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './css/App.css';
+import data from './utils/data';
 
 class App extends Component {
   render() {
+    console.log('data', data);
+    
     return (
       <div className="App">
         <div className="App-Container">
@@ -16,11 +19,11 @@ class App extends Component {
             </div>
             <div className="header-center">
               <h3>
-                The Phantom of the Opera
+                {data.title}
                 <span className="light-font"> Tickets </span>
               </h3>
-              <p className="price">$29.00 - $215.00</p>
-              <a href="#">
+              <p className="price">{data.priceRange}</p>
+              <a href={data.url}>
                 <img
                   src="https://cdn.glitch.com/bf244f65-c514-428a-b4b2-ac2746281e91%2Finfo.svg?1555596324183"
                   alt="i"
