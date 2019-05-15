@@ -9,13 +9,13 @@ class CardContainer extends Component {
   }
 
   renderCards = () => {
-    return this.props.dates.map(date => {
-      return <Card date={date} />
+    return this.props.dates.map((date, idx) => {
+      return <Card key={idx} date={date} />
     })
   }
 
   render() {
-    console.log('CardContainer props', this.props);
+    // console.log('CardContainer props', this.props);
     
     return (
       <div>

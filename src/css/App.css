@@ -87,11 +87,46 @@
 }
 
 .card-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   grid-column: 2/3;
 }
 
 .day {
   color: #666666;
+}
+
+.sold-out {
+  width: 100px;
+  /* height: 50px; */
+  margin: 0 10px;
+}
+
+.sold-out-time {
+  text-decoration: line-through;
+  color: #666666;
+}
+
+.btn {
+  width: 100px;
+  height: 45px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn-full {
+  background: #0068D9;
+  border: none;
+  color: white;
+}
+
+.btn-ltd {
+  background: #ffffff;
+  border: 1px solid #cccccc;
 }
 
 
