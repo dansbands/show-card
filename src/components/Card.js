@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 class Card extends Component {
   
   renderButtons = times => {
-    return times.map((time, idx) => {
-      // console.log(time);
-      
+    return times.map((time, idx) => {      
       if (time.availability) {
         const btnCls = `btn btn-${time.availability}`
         return <button key={idx} className={btnCls}>{time.time}</button>;
