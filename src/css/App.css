@@ -50,7 +50,7 @@
 }
 
 .header h3 a:active {
-  text-decoration: underline;
+  text-decoration: underline
 }
 
 .header h3 a:visited {
@@ -97,6 +97,21 @@
 
 .header img {
   margin-top: 3px;
+}
+
+.cards {
+  max-height: 227px;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+  transition: .25s ease-in-out;
+}
+
+.expanded {
+  max-height: 500px;
+  overflow: auto;
+  border: 0;
+  transition: .25s ease-in-out;
+
 }
 
 .card {

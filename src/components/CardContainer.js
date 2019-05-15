@@ -13,9 +13,9 @@ class CardContainer extends Component {
 
   renderCards = () => {
     let { dates } = this.props;
-    dates = this.state.expanded ? dates : dates.slice(0, 3); 
+    // dates = this.state.expanded ? dates : dates.slice(0, 3); 
     // let lessDates = this.props.
-    console.log(dates);
+    // console.log(dates);
     
     return dates.map((date, idx) => {
       return <Card key={idx} date={date} />
@@ -25,9 +25,13 @@ class CardContainer extends Component {
   render() {
     // console.log('CardContainer props', this.props);
     
+    let cardClass = this.state.expanded ? "expanded" : "cards" 
+
     return (
       <div>
-        {this.renderCards()}
+        <div className={cardClass}>
+          {this.renderCards()}
+        </div>
         <div className="more" onClick={this.toggleExpand}>
           {this.state.expanded ? (
             <span className="more-text">
